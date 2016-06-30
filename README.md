@@ -1,6 +1,13 @@
-# mysqlfuzz
-针对指定ip段的mysql爆破
+需要安装的模块：
 
-<p>使用方法:mysqlfuzz.exe 开始ip 结束ip 线程数</p>
-<p>mysqlfuzz.exe 192.168.1.1 192.168.1.255 100</p>
-很渣..  待改进....
+pip install netaddr
+
+MySQLdb http://download.csdn.net/detail/weibin0320/6663763
+
+支持ip段爆破和单ip爆破
+
+python fuzz.py -a 192.168.1.1/24 -t 30
+
+python fuzz.py -a 192.168.1.23 -t 30
+
+python fuzz.py -a 192.168.1.1-192.168.1.255 -t 30
